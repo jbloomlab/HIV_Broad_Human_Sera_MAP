@@ -1,4 +1,4 @@
-# HIV Broad Human Sera MAP README
+# HIV Broad Human Sera Mutational Antigenic Profiling (MAP)
 
 This repository converts an analysis of MAP data using broad human anti-HIV sera and HIV Envelope strain BG505, performed and written by Adam Dingens, into interactive plots. This repository was made by Caelan Radford. 
 
@@ -11,3 +11,9 @@ The `generate_interactive_plots.ipynb` converts the results from Adam Dingens' a
 The `interactive_plots` folder contains the interactive plots produced in html files. 
 
 The `results_from_lentivirus_dms` folder contains interactive plots produced from lentivirus deep mutational scanning using the BF520 strain for some of these same sera. You can view the pre-print describing this work [here](https://www.biorxiv.org/content/10.1101/2023.03.23.533993v1.abstract).
+
+## Computing Environments
+
+The analysis in the `adingens_analysis` folder needs a computing environment that contains `dms_tools2`. A compatible conda environment can be found [here](https://github.com/dms-vep/HIV_Envelope_BF520_DMS_CD4bs_sera/blob/main/library_design/pinned_environment.yml). 
+
+The conversion performed in `generate_interactive_plots.ipynb` can use the environment `dms-vep-pipeline`, found [here](https://github.com/dms-vep/dms-vep-pipeline/blob/main/environment.yml). 
