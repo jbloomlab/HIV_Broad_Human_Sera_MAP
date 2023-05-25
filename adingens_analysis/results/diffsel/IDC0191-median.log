@@ -1,0 +1,66 @@
+2020-06-30 09:52:15,949 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/adingens/2020/BroadHumanSera_MAP
+
+2020-06-30 09:52:15,949 - INFO - Progress is being logged to ./results/diffsel/IDC0191-median.log
+2020-06-30 09:52:15,954 - INFO - Version information:
+	Time and date: Tue Jun 30 09:52:15 2020
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.7 | packaged by conda-forge | (default, Jul  2 2019, 02:18:42)  [GCC 7.3.0]
+	dms_tools2 version: 2.6.6
+	Bio version: 1.74
+	pandas version: 0.25.3
+	numpy version: 1.17.0
+	IPython version: 7.12.0
+	jupyter version unknown
+	matplotlib version: 3.2.1
+	plotnine version: 0.6.0
+	natsort version: 6.0.0
+	pystan version: 2.19.0.0
+	scipy version: 1.4.1
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.10.1
+	rpy2 version: 3.1.0
+	regex version: 2.5.64
+	umi_tools version: 1.0.0
+
+2020-06-30 09:52:15,954 - INFO - Parsed the following arguments:
+	outdir = ./results/diffsel
+	ncpus = -1
+	use_existing = yes
+	prefs = None
+	diffsel = ./results/diffsel/summary_IDC0191-medianmutdiffsel.csv
+	fracsurvive = None
+	diffprefs = None
+	muteffects = None
+	name = IDC0191-median
+	nperline = 84
+	numberevery = 10
+	excludestop = no
+	stringency = 1
+	restrictdiffsel = positive
+	diffselrange = None
+	muteffectrange = None
+	fracsurvivemax = None
+	sortsites = yes
+	mapmetric = functionalgroup
+	colormap = jet
+	overlay1 = ['./results/diffsel/summary_IDC0191-medianmutdiffsel.csv', 'wildtype', 'wildtype']
+	overlay2 = None
+	overlay3 = None
+	underlay = yes
+	scalebar = ['6', 'differential selection = 6']
+	overlaycolormap = jet
+	letterheight = 1
+	ignore_extracols = no
+	sepline = no
+
+2020-06-30 09:52:15,956 - INFO - Reading diffsel from file ./results/diffsel/summary_IDC0191-medianmutdiffsel.csv...
+2020-06-30 09:52:15,981 - INFO - Read data for 670 sites.
+
+2020-06-30 09:52:16,053 - INFO - Reading overlay for wildtype from ./results/diffsel/summary_IDC0191-medianmutdiffsel.csv...
+2020-06-30 09:52:16,078 - INFO - Read overlay for 670 sites.
+
+2020-06-30 09:52:16,078 - INFO - Making logo plot ./results/diffsel/IDC0191-median_diffsel.pdf...
+2020-06-30 09:52:23,093 - INFO - Successfully created logo plot.
+
+2020-06-30 09:52:23,094 - INFO - Successful completion of dms2_logoplot

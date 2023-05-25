@@ -1,0 +1,76 @@
+2020-03-03 17:32:20,348 - INFO - Beginning execution of dms2_fracsurvive in directory /fh/fast/bloom_j/computational_notebooks/adingens/2020/BroadHumanSera_MAP
+
+2020-03-03 17:32:20,348 - INFO - Progress is being logged to ./results/fracsurviveaboveavg/QA013-2-4ug-rep2.log
+2020-03-03 17:32:20,387 - INFO - Version information:
+	Time and date: Tue Mar  3 17:32:20 2020
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.7 | packaged by conda-forge | (default, Jul  2 2019, 02:18:42)  [GCC 7.3.0]
+	dms_tools2 version: 2.6.5
+	Bio version: 1.74
+	pandas version: 0.25.3
+	numpy version: 1.17.2
+	IPython version: 7.12.0
+	jupyter version unknown
+	matplotlib version: 3.1.2
+	plotnine version: 0.6.0
+	natsort version: 6.0.0
+	pystan version: 2.19.0.0
+	scipy version: 1.3.1
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.10.1
+	rpy2 version: 3.1.0
+	regex version: 2.5.64
+	umi_tools version: 1.0.0
+
+2020-03-03 17:32:20,387 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurviveaboveavg
+	ncpus = 1
+	use_existing = yes
+	indir = ./results/renumberedcounts
+	chartype = codon_to_aa
+	aboveavg = yes
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = QA013-2-4ug-rep2
+	sel = mtvir-rep2-QA013-2-4ug
+	mock = mtvir-rep2
+	libfracsurvive = 0.002637
+	err = wt-DNA-rep2
+
+2020-03-03 17:32:20,393 - INFO - Reading selected sample counts from mtvir-rep2-QA013-2-4ug
+2020-03-03 17:32:20,422 - INFO - Reading mock-selected sample counts from mtvir-rep2
+2020-03-03 17:32:20,445 - INFO - Reading error-control sample counts from wt-DNA-rep2
+2020-03-03 17:32:20,469 - INFO - Computing fracsurvive for each mutation...
+2020-03-03 17:32:20,469 - INFO - These are the fracsurvive **above** the library average of 0.002637
+2020-03-03 17:32:30,976 - INFO - Mutations with largest mutfracsurvive:
+site wildtype mutation  mutfracsurvive
+ 325        D        F            0.23
+ 325        D        W            0.20
+ 325        D        L            0.18
+ 303        T        R            0.18
+ 325        D        R            0.17
+ 334        S        P            0.16
+ 332        N        I            0.16
+ 332        N        R            0.16
+ 325        D        G            0.15
+ 332        N        V            0.15
+
+2020-03-03 17:32:30,976 - INFO - Writing to ./results/fracsurviveaboveavg/QA013-2-4ug-rep2_mutfracsurvive.csv
+2020-03-03 17:32:31,015 - INFO - Computing sitefracsurvive...
+2020-03-03 17:32:31,043 - INFO - Sites with largest avgfracsurvive:
+site  avgfracsurvive  maxfracsurvive
+ 325            0.10            0.23
+ 334            0.10            0.16
+ 332            0.08            0.16
+ 327            0.05            0.12
+ 330            0.05            0.14
+ 303            0.04            0.18
+ 301            0.03            0.09
+ 151            0.02            0.09
+ 324            0.01            0.07
+ 323            0.01            0.13
+
+2020-03-03 17:32:31,043 - INFO - Writing to ./results/fracsurviveaboveavg/QA013-2-4ug-rep2_sitefracsurvive.csv
+2020-03-03 17:32:31,055 - INFO - Successful completion of dms2_fracsurvive

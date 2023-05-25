@@ -1,0 +1,66 @@
+2020-06-30 09:54:58,477 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/adingens/2020/BroadHumanSera_MAP
+
+2020-06-30 09:54:58,477 - INFO - Progress is being logged to ./results/diffsel/IDC0546-mean.log
+2020-06-30 09:54:58,482 - INFO - Version information:
+	Time and date: Tue Jun 30 09:54:58 2020
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.7 | packaged by conda-forge | (default, Jul  2 2019, 02:18:42)  [GCC 7.3.0]
+	dms_tools2 version: 2.6.6
+	Bio version: 1.74
+	pandas version: 0.25.3
+	numpy version: 1.17.0
+	IPython version: 7.12.0
+	jupyter version unknown
+	matplotlib version: 3.2.1
+	plotnine version: 0.6.0
+	natsort version: 6.0.0
+	pystan version: 2.19.0.0
+	scipy version: 1.4.1
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.10.1
+	rpy2 version: 3.1.0
+	regex version: 2.5.64
+	umi_tools version: 1.0.0
+
+2020-06-30 09:54:58,482 - INFO - Parsed the following arguments:
+	outdir = ./results/diffsel
+	ncpus = -1
+	use_existing = yes
+	prefs = None
+	diffsel = ./results/diffsel/summary_IDC0546-meanmutdiffsel.csv
+	fracsurvive = None
+	diffprefs = None
+	muteffects = None
+	name = IDC0546-mean
+	nperline = 84
+	numberevery = 10
+	excludestop = no
+	stringency = 1
+	restrictdiffsel = positive
+	diffselrange = None
+	muteffectrange = None
+	fracsurvivemax = None
+	sortsites = yes
+	mapmetric = functionalgroup
+	colormap = jet
+	overlay1 = ['./results/diffsel/summary_IDC0546-meanmutdiffsel.csv', 'wildtype', 'wildtype']
+	overlay2 = None
+	overlay3 = None
+	underlay = yes
+	scalebar = ['4', 'differential selection = 4']
+	overlaycolormap = jet
+	letterheight = 1
+	ignore_extracols = no
+	sepline = no
+
+2020-06-30 09:54:58,484 - INFO - Reading diffsel from file ./results/diffsel/summary_IDC0546-meanmutdiffsel.csv...
+2020-06-30 09:54:58,506 - INFO - Read data for 670 sites.
+
+2020-06-30 09:54:58,570 - INFO - Reading overlay for wildtype from ./results/diffsel/summary_IDC0546-meanmutdiffsel.csv...
+2020-06-30 09:54:58,593 - INFO - Read overlay for 670 sites.
+
+2020-06-30 09:54:58,593 - INFO - Making logo plot ./results/diffsel/IDC0546-mean_diffsel.pdf...
+2020-06-30 09:55:07,187 - INFO - Successfully created logo plot.
+
+2020-06-30 09:55:07,187 - INFO - Successful completion of dms2_logoplot

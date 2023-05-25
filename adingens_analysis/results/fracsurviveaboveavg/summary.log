@@ -1,0 +1,156 @@
+2020-03-03 17:30:47,902 - INFO - Beginning execution of dms2_batch_fracsurvive in directory /fh/fast/bloom_j/computational_notebooks/adingens/2020/BroadHumanSera_MAP
+
+2020-03-03 17:30:47,902 - INFO - Progress is being logged to ./results/fracsurviveaboveavg/summary.log
+2020-03-03 17:30:47,942 - INFO - Version information:
+	Time and date: Tue Mar  3 17:30:47 2020
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.7 | packaged by conda-forge | (default, Jul  2 2019, 02:18:42)  [GCC 7.3.0]
+	dms_tools2 version: 2.6.5
+	Bio version: 1.74
+	pandas version: 0.25.3
+	numpy version: 1.17.2
+	IPython version: 7.12.0
+	jupyter version unknown
+	matplotlib version: 3.1.2
+	plotnine version: 0.6.0
+	natsort version: 6.0.0
+	pystan version: 2.19.0.0
+	scipy version: 1.3.1
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.10.1
+	rpy2 version: 3.1.0
+	regex version: 2.5.64
+	umi_tools version: 1.0.0
+
+2020-03-03 17:30:47,943 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurviveaboveavg
+	ncpus = -1
+	use_existing = yes
+	indir = ./results/renumberedcounts
+	chartype = codon_to_aa
+	aboveavg = yes
+	excludestop = yes
+	pseudocount = 5
+	mincount = 0
+	batchfile = ./results/fracsurvive/batch.csv
+	summaryprefix = summary
+
+2020-03-03 17:30:47,943 - INFO - Parsing info from ./results/fracsurvive/batch.csv
+2020-03-03 17:30:47,986 - INFO - Read the following sample information:
+group,name,sel,mock,err,mds_names,libfracsurvive
+118,4ug-rep2d,mtvir-rep2d-118-4ug,mtvir-rep2d,wt-DNA-rep2,118-4ug-rep2d,0.005177235
+118,8ug-rep2d,mtvir-rep2d-118-8ug,mtvir-rep2d,wt-DNA-rep2,118-8ug-rep2d,0.000167766
+118,4ug-rep3d,mtvir-rep3d-118-4ug,mtvir-rep3d,wt-DNA-rep3,118-4ug-rep3d,0.005181678
+118,8ug-rep3d,mtvir-rep3d-118-8ug,mtvir-rep3d,wt-DNA-rep3,118-8ug-rep3d,0.0006734689999999999
+212,6ug-rep1v2b,mtvir-rep1v2b-212-6ug,mtvir-rep1v2b,wt-DNA-rep1,212-6ug-rep1v2b,0.034943168
+212,8ug-rep3e,mtvir-rep3e-212-8ug,mtvir-rep3e,wt-DNA-rep3,212-8ug-rep3e,0.006214775
+212,10ug-rep1v2a,mtvir-rep1v2a-212-10ug,mtvir-rep1v2a,wt-DNA-rep1,212-10ug-rep1v2a,0.002501396
+212,7ug-rep1v2a,mtvir-rep1v2a-212-7ug,mtvir-rep1v2a,wt-DNA-rep1,212-7ug-rep1v2a,0.007341482
+IDC0136,8500ug-rep1v2b,mtvir-rep1v2b-IDC0136-8500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0136-8500ug-rep1v2b,0.04126587
+IDC0136,7000ug-rep1v2b,mtvir-rep1v2b-IDC0136-7000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0136-7000ug-rep1v2b,0.06297330400000001
+IDC0136,5500ug-rep1v2b,mtvir-rep1v2b-IDC0136-5500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0136-5500ug-rep1v2b,0.136000955
+IDC0337,6000ug-rep1v2b,mtvir-rep1v2b-IDC0337-6000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0337-6000ug-rep1v2b,0.059009668
+IDC0337,4500ug-rep1v2b,mtvir-rep1v2b-IDC0337-4500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0337-4500ug-rep1v2b,0.091161243
+IDC0337,4000ug-rep1v2b,mtvir-rep1v2b-IDC0337-4000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0337-4000ug-rep1v2b,0.10200934
+IDC208,6000ug-rep1v2b,mtvir-rep1v2b-IDC208-6000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC208-6000ug-rep1v2b,0.068418903
+IDC208,5000ug-rep1v2b,mtvir-rep1v2b-IDC208-5000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC208-5000ug-rep1v2b,0.103580829
+IDC208,4000ug-rep1v2b,mtvir-rep1v2b-IDC208-4000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC208-4000ug-rep1v2b,0.150961614
+IDC403,8500ug-rep1v2b,mtvir-rep1v2b-IDC403-8500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC403-8500ug-rep1v2b,0.000359057
+IDC403,7500ug-rep1v2b,mtvir-rep1v2b-IDC403-7500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC403-7500ug-rep1v2b,0.0008930569999999998
+IDC403,6000ug-rep1v2b,mtvir-rep1v2b-IDC403-6000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC403-6000ug-rep1v2b,0.001969129
+IDC561,3000ug-rep1v2a,mtvir-rep1v2a-561-IgG-3000ug,mtvir-rep1v2a,wt-DNA-rep1,IDC561-3000ug-rep1v2a,0.002478397
+IDC561,2500ug-rep3e,mtvir-rep3e-561-IgG-2500ug,mtvir-rep3e,wt-DNA-rep3,IDC561-2500ug-rep3e,0.023229919
+IDC561,3500ug-rep1v2a,mtvir-rep1v2a-561-IgG-3500ug,mtvir-rep1v2a,wt-DNA-rep1,IDC561-3500ug-rep1v2a,0.00181995
+IDC561,2800ug-rep1v2b,mtvir-rep1v2b-561-IgG-2800ug,mtvir-rep1v2b,wt-DNA-rep1,IDC561-2800ug-rep1v2b,0.007366521
+IDC561,2200ug-rep1v2b,mtvir-rep1v2b-561-IgG-2200ug,mtvir-rep1v2b,wt-DNA-rep1,IDC561-2200ug-rep1v2b,0.012112296000000002
+QA013-2,2ug-rep2,mtvir-rep2-QA013-2-2ug,mtvir-rep2,wt-DNA-rep2,QA013-2-2ug-rep2,0.032488
+QA013-2,4ug-rep3,mtvir-rep3-QA013-2-4ug,mtvir-rep3,wt-DNA-rep3,QA013-2-4ug-rep3,0.001661
+QA013-2,4ug-rep2,mtvir-rep2-QA013-2-4ug,mtvir-rep2,wt-DNA-rep2,QA013-2-4ug-rep2,0.002637
+QA013-2282dpi,d40-rep1v2b,mtvir-rep1v2b-QA013-2282dpi-d40,mtvir-rep1v2b,wt-DNA-rep1,QA013-2282dpi-d40-rep1v2b,0.470668784
+QA013-2282dpi,d25-rep1v2b,mtvir-rep1v2b-QA013-2282dpi-d25,mtvir-rep1v2b,wt-DNA-rep1,QA013-2282dpi-d25-rep1v2b,0.278700662
+QA013-2282dpi,d15-rep1v2a,mtvir-rep1v2a-QA013-2282dpi-d15,mtvir-rep1v2a,wt-DNA-rep1,QA013-2282dpi-d15-rep1v2a,0.001444478
+QA013-2282dpi,d10-rep1v2a,mtvir-rep1v2a-QA013-2282dpi-d10,mtvir-rep1v2a,wt-DNA-rep1,QA013-2282dpi-d10-rep1v2a,0.00031665400000000003
+QA013-2282dpi,d7-5-rep3e,mtvir-rep3e-QA013-2282dpi-d7-5,mtvir-rep3e,wt-DNA-rep3,QA013-2282dpi-d7-5-rep3e,0.000388446
+
+
+2020-03-03 17:30:48,079 - INFO - Running dms2_fracsurvive on all samples...
+2020-03-03 17:32:34,192 - INFO - Completed runs of dms2_fracsurvive.
+
+2020-03-03 17:32:34,246 - INFO - Analyzing the fracsurvive values for the 4 samples in group 118.
+2020-03-03 17:32:34,247 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_118-mutfracsurvivecorr.pdf
+2020-03-03 17:32:42,806 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_118-avgfracsurvivecorr.pdf
+2020-03-03 17:32:49,864 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_118-maxfracsurvivecorr.pdf
+2020-03-03 17:32:56,847 - INFO - Writing mean mutfracsurvive to ./results/fracsurviveaboveavg/summary_118-meanmutfracsurvive.csv
+2020-03-03 17:32:57,042 - INFO - Writing mean sitefracsurvive to ./results/fracsurviveaboveavg/summary_118-meansitefracsurvive.csv
+2020-03-03 17:32:57,079 - INFO - Writing median mutfracsurvive to ./results/fracsurviveaboveavg/summary_118-medianmutfracsurvive.csv
+2020-03-03 17:32:57,253 - INFO - Writing median sitefracsurvive to ./results/fracsurviveaboveavg/summary_118-mediansitefracsurvive.csv
+2020-03-03 17:32:57,289 - INFO - Analyzing the fracsurvive values for the 4 samples in group 212.
+2020-03-03 17:32:57,289 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_212-mutfracsurvivecorr.pdf
+2020-03-03 17:33:05,405 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_212-avgfracsurvivecorr.pdf
+2020-03-03 17:33:12,693 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_212-maxfracsurvivecorr.pdf
+2020-03-03 17:33:19,504 - INFO - Writing mean mutfracsurvive to ./results/fracsurviveaboveavg/summary_212-meanmutfracsurvive.csv
+2020-03-03 17:33:19,781 - INFO - Writing mean sitefracsurvive to ./results/fracsurviveaboveavg/summary_212-meansitefracsurvive.csv
+2020-03-03 17:33:19,807 - INFO - Writing median mutfracsurvive to ./results/fracsurviveaboveavg/summary_212-medianmutfracsurvive.csv
+2020-03-03 17:33:19,993 - INFO - Writing median sitefracsurvive to ./results/fracsurviveaboveavg/summary_212-mediansitefracsurvive.csv
+2020-03-03 17:33:20,025 - INFO - Analyzing the fracsurvive values for the 3 samples in group IDC0136.
+2020-03-03 17:33:20,025 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC0136-mutfracsurvivecorr.pdf
+2020-03-03 17:33:25,901 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC0136-avgfracsurvivecorr.pdf
+2020-03-03 17:33:31,008 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC0136-maxfracsurvivecorr.pdf
+2020-03-03 17:33:36,213 - INFO - Writing mean mutfracsurvive to ./results/fracsurviveaboveavg/summary_IDC0136-meanmutfracsurvive.csv
+2020-03-03 17:33:36,470 - INFO - Writing mean sitefracsurvive to ./results/fracsurviveaboveavg/summary_IDC0136-meansitefracsurvive.csv
+2020-03-03 17:33:36,532 - INFO - Writing median mutfracsurvive to ./results/fracsurviveaboveavg/summary_IDC0136-medianmutfracsurvive.csv
+2020-03-03 17:33:36,703 - INFO - Writing median sitefracsurvive to ./results/fracsurviveaboveavg/summary_IDC0136-mediansitefracsurvive.csv
+2020-03-03 17:33:36,736 - INFO - Analyzing the fracsurvive values for the 3 samples in group IDC0337.
+2020-03-03 17:33:36,736 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC0337-mutfracsurvivecorr.pdf
+2020-03-03 17:33:42,682 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC0337-avgfracsurvivecorr.pdf
+2020-03-03 17:33:47,941 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC0337-maxfracsurvivecorr.pdf
+2020-03-03 17:33:53,222 - INFO - Writing mean mutfracsurvive to ./results/fracsurviveaboveavg/summary_IDC0337-meanmutfracsurvive.csv
+2020-03-03 17:33:53,396 - INFO - Writing mean sitefracsurvive to ./results/fracsurviveaboveavg/summary_IDC0337-meansitefracsurvive.csv
+2020-03-03 17:33:53,429 - INFO - Writing median mutfracsurvive to ./results/fracsurviveaboveavg/summary_IDC0337-medianmutfracsurvive.csv
+2020-03-03 17:33:53,599 - INFO - Writing median sitefracsurvive to ./results/fracsurviveaboveavg/summary_IDC0337-mediansitefracsurvive.csv
+2020-03-03 17:33:53,630 - INFO - Analyzing the fracsurvive values for the 3 samples in group IDC208.
+2020-03-03 17:33:53,630 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC208-mutfracsurvivecorr.pdf
+2020-03-03 17:33:59,888 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC208-avgfracsurvivecorr.pdf
+2020-03-03 17:34:05,208 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC208-maxfracsurvivecorr.pdf
+2020-03-03 17:34:10,860 - INFO - Writing mean mutfracsurvive to ./results/fracsurviveaboveavg/summary_IDC208-meanmutfracsurvive.csv
+2020-03-03 17:34:11,023 - INFO - Writing mean sitefracsurvive to ./results/fracsurviveaboveavg/summary_IDC208-meansitefracsurvive.csv
+2020-03-03 17:34:11,073 - INFO - Writing median mutfracsurvive to ./results/fracsurviveaboveavg/summary_IDC208-medianmutfracsurvive.csv
+2020-03-03 17:34:11,213 - INFO - Writing median sitefracsurvive to ./results/fracsurviveaboveavg/summary_IDC208-mediansitefracsurvive.csv
+2020-03-03 17:34:11,241 - INFO - Analyzing the fracsurvive values for the 3 samples in group IDC403.
+2020-03-03 17:34:11,241 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC403-mutfracsurvivecorr.pdf
+2020-03-03 17:34:17,057 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC403-avgfracsurvivecorr.pdf
+2020-03-03 17:34:22,357 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC403-maxfracsurvivecorr.pdf
+2020-03-03 17:34:27,818 - INFO - Writing mean mutfracsurvive to ./results/fracsurviveaboveavg/summary_IDC403-meanmutfracsurvive.csv
+2020-03-03 17:34:27,990 - INFO - Writing mean sitefracsurvive to ./results/fracsurviveaboveavg/summary_IDC403-meansitefracsurvive.csv
+2020-03-03 17:34:28,017 - INFO - Writing median mutfracsurvive to ./results/fracsurviveaboveavg/summary_IDC403-medianmutfracsurvive.csv
+2020-03-03 17:34:28,178 - INFO - Writing median sitefracsurvive to ./results/fracsurviveaboveavg/summary_IDC403-mediansitefracsurvive.csv
+2020-03-03 17:34:28,206 - INFO - Analyzing the fracsurvive values for the 5 samples in group IDC561.
+2020-03-03 17:34:28,207 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC561-mutfracsurvivecorr.pdf
+2020-03-03 17:34:40,127 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC561-avgfracsurvivecorr.pdf
+2020-03-03 17:34:49,180 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_IDC561-maxfracsurvivecorr.pdf
+2020-03-03 17:34:58,350 - INFO - Writing mean mutfracsurvive to ./results/fracsurviveaboveavg/summary_IDC561-meanmutfracsurvive.csv
+2020-03-03 17:34:58,637 - INFO - Writing mean sitefracsurvive to ./results/fracsurviveaboveavg/summary_IDC561-meansitefracsurvive.csv
+2020-03-03 17:34:58,670 - INFO - Writing median mutfracsurvive to ./results/fracsurviveaboveavg/summary_IDC561-medianmutfracsurvive.csv
+2020-03-03 17:34:58,902 - INFO - Writing median sitefracsurvive to ./results/fracsurviveaboveavg/summary_IDC561-mediansitefracsurvive.csv
+2020-03-03 17:34:58,932 - INFO - Analyzing the fracsurvive values for the 3 samples in group QA013-2.
+2020-03-03 17:34:58,932 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_QA013-2-mutfracsurvivecorr.pdf
+2020-03-03 17:35:04,714 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_QA013-2-avgfracsurvivecorr.pdf
+2020-03-03 17:35:09,739 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_QA013-2-maxfracsurvivecorr.pdf
+2020-03-03 17:35:14,665 - INFO - Writing mean mutfracsurvive to ./results/fracsurviveaboveavg/summary_QA013-2-meanmutfracsurvive.csv
+2020-03-03 17:35:14,822 - INFO - Writing mean sitefracsurvive to ./results/fracsurviveaboveavg/summary_QA013-2-meansitefracsurvive.csv
+2020-03-03 17:35:14,851 - INFO - Writing median mutfracsurvive to ./results/fracsurviveaboveavg/summary_QA013-2-medianmutfracsurvive.csv
+2020-03-03 17:35:14,987 - INFO - Writing median sitefracsurvive to ./results/fracsurviveaboveavg/summary_QA013-2-mediansitefracsurvive.csv
+2020-03-03 17:35:15,025 - INFO - Analyzing the fracsurvive values for the 5 samples in group QA013-2282dpi.
+2020-03-03 17:35:15,026 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_QA013-2282dpi-mutfracsurvivecorr.pdf
+2020-03-03 17:35:26,088 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_QA013-2282dpi-avgfracsurvivecorr.pdf
+2020-03-03 17:35:34,805 - INFO - Plotting sitefracsurvive correlations to ./results/fracsurviveaboveavg/summary_QA013-2282dpi-maxfracsurvivecorr.pdf
+2020-03-03 17:35:43,662 - INFO - Writing mean mutfracsurvive to ./results/fracsurviveaboveavg/summary_QA013-2282dpi-meanmutfracsurvive.csv
+2020-03-03 17:35:44,347 - INFO - Writing mean sitefracsurvive to ./results/fracsurviveaboveavg/summary_QA013-2282dpi-meansitefracsurvive.csv
+2020-03-03 17:35:44,380 - INFO - Writing median mutfracsurvive to ./results/fracsurviveaboveavg/summary_QA013-2282dpi-medianmutfracsurvive.csv
+2020-03-03 17:35:44,612 - INFO - Writing median sitefracsurvive to ./results/fracsurviveaboveavg/summary_QA013-2282dpi-mediansitefracsurvive.csv
+2020-03-03 17:35:44,644 - INFO - Plotting mean avgfracsurvive to ./results/fracsurviveaboveavg/summary_meanavgfracsurvive.pdf
+2020-03-03 17:36:13,900 - INFO - Plotting mean maxfracsurvive to ./results/fracsurviveaboveavg/summary_meanmaxfracsurvive.pdf
+2020-03-03 17:36:43,290 - INFO - Plotting median avgfracsurvive to ./results/fracsurviveaboveavg/summary_medianavgfracsurvive.pdf
+2020-03-03 17:37:11,846 - INFO - Plotting median maxfracsurvive to ./results/fracsurviveaboveavg/summary_medianmaxfracsurvive.pdf
+2020-03-03 17:37:40,064 - INFO - Successful completion of dms2_batch_fracsurvive

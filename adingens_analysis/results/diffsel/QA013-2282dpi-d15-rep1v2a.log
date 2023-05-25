@@ -1,0 +1,66 @@
+2020-03-03 17:02:24,581 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/adingens/2020/BroadHumanSera_MAP
+
+2020-03-03 17:02:24,581 - INFO - Progress is being logged to ./results/diffsel/QA013-2282dpi-d15-rep1v2a.log
+2020-03-03 17:02:24,651 - INFO - Version information:
+	Time and date: Tue Mar  3 17:02:24 2020
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.7 | packaged by conda-forge | (default, Jul  2 2019, 02:18:42)  [GCC 7.3.0]
+	dms_tools2 version: 2.6.5
+	Bio version: 1.74
+	pandas version: 0.25.3
+	numpy version: 1.17.2
+	IPython version: 7.12.0
+	jupyter version unknown
+	matplotlib version: 3.1.2
+	plotnine version: 0.6.0
+	natsort version: 6.0.0
+	pystan version: 2.19.0.0
+	scipy version: 1.3.1
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.10.1
+	rpy2 version: 3.1.0
+	regex version: 2.5.64
+	umi_tools version: 1.0.0
+
+2020-03-03 17:02:24,651 - INFO - Parsed the following arguments:
+	outdir = ./results/diffsel
+	ncpus = -1
+	use_existing = yes
+	prefs = None
+	diffsel = ./results/diffsel/QA013-2282dpi-d15-rep1v2a_mutdiffsel.csv
+	fracsurvive = None
+	diffprefs = None
+	muteffects = None
+	name = QA013-2282dpi-d15-rep1v2a
+	nperline = 84
+	numberevery = 10
+	excludestop = no
+	stringency = 1
+	restrictdiffsel = positive
+	diffselrange = None
+	muteffectrange = None
+	fracsurvivemax = None
+	sortsites = yes
+	mapmetric = functionalgroup
+	colormap = jet
+	overlay1 = ['./results/diffsel/QA013-2282dpi-d15-rep1v2a_mutdiffsel.csv', 'wildtype', 'wildtype']
+	overlay2 = None
+	overlay3 = None
+	underlay = yes
+	scalebar = ['3', 'differential selection = 3']
+	overlaycolormap = jet
+	letterheight = 1
+	ignore_extracols = no
+	sepline = no
+
+2020-03-03 17:02:24,667 - INFO - Reading diffsel from file ./results/diffsel/QA013-2282dpi-d15-rep1v2a_mutdiffsel.csv...
+2020-03-03 17:02:24,732 - INFO - Read data for 670 sites.
+
+2020-03-03 17:02:25,034 - INFO - Reading overlay for wildtype from ./results/diffsel/QA013-2282dpi-d15-rep1v2a_mutdiffsel.csv...
+2020-03-03 17:02:25,073 - INFO - Read overlay for 670 sites.
+
+2020-03-03 17:02:25,073 - INFO - Making logo plot ./results/diffsel/QA013-2282dpi-d15-rep1v2a_diffsel.pdf...
+2020-03-03 17:02:35,789 - INFO - Successfully created logo plot.
+
+2020-03-03 17:02:35,789 - INFO - Successful completion of dms2_logoplot

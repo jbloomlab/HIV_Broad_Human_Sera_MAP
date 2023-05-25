@@ -1,0 +1,66 @@
+2020-02-25 16:11:25,053 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/adingens/2020/BroadHumanSera_MAP
+
+2020-02-25 16:11:25,054 - INFO - Progress is being logged to ./results/diffsel/IDC403-7500ug-rep1v2b.log
+2020-02-25 16:11:25,070 - INFO - Version information:
+	Time and date: Tue Feb 25 16:11:25 2020
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.7 | packaged by conda-forge | (default, Jul  2 2019, 02:18:42)  [GCC 7.3.0]
+	dms_tools2 version: 2.6.5
+	Bio version: 1.74
+	pandas version: 0.25.3
+	numpy version: 1.17.2
+	IPython version: 7.12.0
+	jupyter version unknown
+	matplotlib version: 3.1.2
+	plotnine version: 0.6.0
+	natsort version: 6.0.0
+	pystan version: 2.19.0.0
+	scipy version: 1.3.1
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.10.1
+	rpy2 version: 3.1.0
+	regex version: 2.5.64
+	umi_tools version: 1.0.0
+
+2020-02-25 16:11:25,071 - INFO - Parsed the following arguments:
+	outdir = ./results/diffsel
+	ncpus = -1
+	use_existing = yes
+	prefs = None
+	diffsel = ./results/diffsel/IDC403-7500ug-rep1v2b_mutdiffsel.csv
+	fracsurvive = None
+	diffprefs = None
+	muteffects = None
+	name = IDC403-7500ug-rep1v2b
+	nperline = 84
+	numberevery = 10
+	excludestop = no
+	stringency = 1
+	restrictdiffsel = positive
+	diffselrange = None
+	muteffectrange = None
+	fracsurvivemax = None
+	sortsites = yes
+	mapmetric = functionalgroup
+	colormap = jet
+	overlay1 = ['./results/diffsel/IDC403-7500ug-rep1v2b_mutdiffsel.csv', 'wildtype', 'wildtype']
+	overlay2 = None
+	overlay3 = None
+	underlay = yes
+	scalebar = ['6', 'differential selection = 6']
+	overlaycolormap = jet
+	letterheight = 1
+	ignore_extracols = no
+	sepline = no
+
+2020-02-25 16:11:25,074 - INFO - Reading diffsel from file ./results/diffsel/IDC403-7500ug-rep1v2b_mutdiffsel.csv...
+2020-02-25 16:11:25,117 - INFO - Read data for 670 sites.
+
+2020-02-25 16:11:25,283 - INFO - Reading overlay for wildtype from ./results/diffsel/IDC403-7500ug-rep1v2b_mutdiffsel.csv...
+2020-02-25 16:11:25,361 - INFO - Read overlay for 670 sites.
+
+2020-02-25 16:11:25,361 - INFO - Making logo plot ./results/diffsel/IDC403-7500ug-rep1v2b_diffsel.pdf...
+2020-02-25 16:11:33,442 - INFO - Successfully created logo plot.
+
+2020-02-25 16:11:33,442 - INFO - Successful completion of dms2_logoplot

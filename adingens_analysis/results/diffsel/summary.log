@@ -1,0 +1,269 @@
+2020-06-29 23:25:17,001 - INFO - Beginning execution of dms2_batch_diffsel in directory /fh/fast/bloom_j/computational_notebooks/adingens/2020/BroadHumanSera_MAP
+
+2020-06-29 23:25:17,001 - INFO - Progress is being logged to ./results/diffsel/summary.log
+2020-06-29 23:25:17,018 - INFO - Version information:
+	Time and date: Mon Jun 29 23:25:16 2020
+	Platform: Linux-4.15.0-88-generic-x86_64-with-debian-buster-sid
+	Python version: 3.6.7 | packaged by conda-forge | (default, Jul  2 2019, 02:18:42)  [GCC 7.3.0]
+	dms_tools2 version: 2.6.6
+	Bio version: 1.74
+	pandas version: 0.25.3
+	numpy version: 1.17.0
+	IPython version: 7.12.0
+	jupyter version unknown
+	matplotlib version: 3.2.1
+	plotnine version: 0.6.0
+	natsort version: 6.0.0
+	pystan version: 2.19.0.0
+	scipy version: 1.4.1
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.10.1
+	rpy2 version: 3.1.0
+	regex version: 2.5.64
+	umi_tools version: 1.0.0
+
+2020-06-29 23:25:17,018 - INFO - Parsed the following arguments:
+	outdir = ./results/diffsel
+	ncpus = 14
+	use_existing = yes
+	indir = ./results/renumberedcounts
+	chartype = codon_to_aa
+	excludestop = yes
+	pseudocount = 5
+	mincount = 0
+	batchfile = ./results/diffsel/batch.csv
+	summaryprefix = summary
+
+2020-06-29 23:25:17,018 - INFO - Parsing info from ./results/diffsel/batch.csv
+2020-06-29 23:25:17,037 - INFO - Read the following sample information:
+group,name,sel,mock,err,mds_names,libfracsurvive
+118,4ug-rep2d,mtvir-rep2d-118-4ug,mtvir-rep2d,wt-DNA-rep2,118-4ug-rep2d,0.005177235
+118,8ug-rep2d,mtvir-rep2d-118-8ug,mtvir-rep2d,wt-DNA-rep2,118-8ug-rep2d,0.000167766
+IDC561,2500ug-rep3e,mtvir-rep3e-561-IgG-2500ug,mtvir-rep3e,wt-DNA-rep3,IDC561-2500ug-rep3e,0.023229918999999998
+118,4ug-rep3d,mtvir-rep3d-118-4ug,mtvir-rep3d,wt-DNA-rep3,118-4ug-rep3d,0.0051816779999999995
+118,8ug-rep3d,mtvir-rep3d-118-8ug,mtvir-rep3d,wt-DNA-rep3,118-8ug-rep3d,0.0006734689999999999
+212,8ug-rep3e,mtvir-rep3e-212-8ug,mtvir-rep3e,wt-DNA-rep3,212-8ug-rep3e,0.006214775
+QA013-2282dpi,d7-5-rep3e,mtvir-rep3e-QA013-2282dpi-d7-5,mtvir-rep3e,wt-DNA-rep3,QA013-2282dpi-d7-5-rep3e,0.000388446
+QA013-2282dpi,d10-rep1v2a,mtvir-rep1v2a-QA013-2282dpi-d10,mtvir-rep1v2a,wt-DNA-rep1,QA013-2282dpi-d10-rep1v2a,0.00031665400000000003
+QA013-2282dpi,d15-rep1v2a,mtvir-rep1v2a-QA013-2282dpi-d15,mtvir-rep1v2a,wt-DNA-rep1,QA013-2282dpi-d15-rep1v2a,0.001444478
+IDC561,3000ug-rep1v2a,mtvir-rep1v2a-561-IgG-3000ug,mtvir-rep1v2a,wt-DNA-rep1,IDC561-3000ug-rep1v2a,0.0024783970000000002
+IDC561,3500ug-rep1v2a,mtvir-rep1v2a-561-IgG-3500ug,mtvir-rep1v2a,wt-DNA-rep1,IDC561-3500ug-rep1v2a,0.00181995
+212,10ug-rep1v2a,mtvir-rep1v2a-212-10ug,mtvir-rep1v2a,wt-DNA-rep1,212-10ug-rep1v2a,0.002501396
+212,7ug-rep1v2a,mtvir-rep1v2a-212-7ug,mtvir-rep1v2a,wt-DNA-rep1,212-7ug-rep1v2a,0.007341482
+IDC0136,5500ug-rep1v2b,mtvir-rep1v2b-IDC0136-5500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0136-5500ug-rep1v2b,0.136000955
+IDC0136,7000ug-rep1v2b,mtvir-rep1v2b-IDC0136-7000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0136-7000ug-rep1v2b,0.06297330400000001
+IDC0136,8500ug-rep1v2b,mtvir-rep1v2b-IDC0136-8500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0136-8500ug-rep1v2b,0.04126587
+IDC0337,4000ug-rep1v2b,mtvir-rep1v2b-IDC0337-4000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0337-4000ug-rep1v2b,0.10200934
+IDC0337,4500ug-rep1v2b,mtvir-rep1v2b-IDC0337-4500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0337-4500ug-rep1v2b,0.091161243
+IDC403,7500ug-rep1v2b,mtvir-rep1v2b-IDC403-7500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC403-7500ug-rep1v2b,0.0008930569999999999
+IDC403,6000ug-rep1v2b,mtvir-rep1v2b-IDC403-6000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC403-6000ug-rep1v2b,0.001969129
+IDC208,6000ug-rep1v2b,mtvir-rep1v2b-IDC208-6000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC208-6000ug-rep1v2b,0.068418903
+IDC208,5000ug-rep1v2b,mtvir-rep1v2b-IDC208-5000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC208-5000ug-rep1v2b,0.103580829
+IDC208,4000ug-rep1v2b,mtvir-rep1v2b-IDC208-4000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC208-4000ug-rep1v2b,0.150961614
+IDC0337,6000ug-rep1v2b,mtvir-rep1v2b-IDC0337-6000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0337-6000ug-rep1v2b,0.059009668
+IDC561,2800ug-rep1v2b,mtvir-rep1v2b-561-IgG-2800ug,mtvir-rep1v2b,wt-DNA-rep1,IDC561-2800ug-rep1v2b,0.007366521
+IDC561,2200ug-rep1v2b,mtvir-rep1v2b-561-IgG-2200ug,mtvir-rep1v2b,wt-DNA-rep1,IDC561-2200ug-rep1v2b,0.012112296000000002
+212,6ug-rep1v2b,mtvir-rep1v2b-212-6ug,mtvir-rep1v2b,wt-DNA-rep1,212-6ug-rep1v2b,0.034943168
+QA013-2282dpi,d40-rep1v2b,mtvir-rep1v2b-QA013-2282dpi-d40,mtvir-rep1v2b,wt-DNA-rep1,QA013-2282dpi-d40-rep1v2b,0.470668784
+QA013-2282dpi,d25-rep1v2b,mtvir-rep1v2b-QA013-2282dpi-d25,mtvir-rep1v2b,wt-DNA-rep1,QA013-2282dpi-d25-rep1v2b,0.278700662
+IDC403,8500ug-rep1v2b,mtvir-rep1v2b-IDC403-8500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC403-8500ug-rep1v2b,0.000359057
+QA013-2,2ug-rep2,mtvir-rep2-QA013-2-2ug,mtvir-rep2,wt-DNA-rep2,QA013-2-2ug-rep2,0.032488
+QA013-2,4ug-rep2,mtvir-rep2-QA013-2-4ug,mtvir-rep2,wt-DNA-rep2,QA013-2-4ug-rep2,0.002637
+QA013-2,4ug-rep3,mtvir-rep3-QA013-2-4ug,mtvir-rep3,wt-DNA-rep3,QA013-2-4ug-rep3,0.001661
+IDC0191,6000ug-rep3v2a,mtvir-rep3v2a-IDC0191-6000ug,mtvir-rep3v2a,wt-DNA-rep3,IDC0191-6000ug-rep3v2a,
+IDC0245,8000ug-rep3v2a,mtvir-rep3v2a-IDC0245-8000ug,mtvir-rep3v2a,wt-DNA-rep3,IDC0245-8000ug-rep3v2a,
+IDC0396,9000ug-rep3v2a,mtvir-rep3v2a-IDC0396-9000ug,mtvir-rep3v2a,wt-DNA-rep3,IDC0396-9000ug-rep3v2a,
+IDC0513,5000ug-rep3v2a,mtvir-rep3v2a-IDC0513-5000ug,mtvir-rep3v2a,wt-DNA-rep3,IDC0513-5000ug-rep3v2a,
+IDC0518,8000ug-rep3v2a,mtvir-rep3v2a-IDC0518-8000ug,mtvir-rep3v2a,wt-DNA-rep3,IDC0518-8000ug-rep3v2a,
+IDC0546,8500ug-rep3v2a,mtvir-rep3v2a-IDC0546-8500ug,mtvir-rep3v2a,wt-DNA-rep3,IDC0546-8500ug-rep3v2a,
+IDF033,1400ug-rep3v2a,mtvir-rep3v2a-IDF033-1400ug,mtvir-rep3v2a,wt-DNA-rep3,IDF033-1400ug-rep3v2a,
+IDF033,1800ug-rep3v2a,mtvir-rep3v2a-IDF033-1800ug,mtvir-rep3v2a,wt-DNA-rep3,IDF033-1800ug-rep3v2a,
+IDF065,1400ug-rep3v2a,mtvir-rep3v2a-IDF065-1400ug,mtvir-rep3v2a,wt-DNA-rep3,IDF065-1400ug-rep3v2a,
+IDF141,6000ug-rep3v2a,mtvir-rep3v2a-IDF141-6000ug,mtvir-rep3v2a,wt-DNA-rep3,IDF141-6000ug-rep3v2a,
+IDF147,5300ug-rep3v2a,mtvir-rep3v2a-IDF147-5300ug,mtvir-rep3v2a,wt-DNA-rep3,IDF147-5300ug-rep3v2a,
+
+
+2020-06-29 23:25:17,280 - INFO - Running dms2_diffsel on all samples...
+2020-06-29 23:25:56,597 - INFO - Completed runs of dms2_diffsel.
+
+2020-06-29 23:25:56,697 - INFO - Analyzing the diffsel values for the 4 samples in group 118.
+2020-06-29 23:25:56,697 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_118-mutdiffselcorr.pdf
+2020-06-29 23:26:00,835 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_118-absolutesitediffselcorr.pdf
+2020-06-29 23:26:03,994 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_118-positivesitediffselcorr.pdf
+2020-06-29 23:26:07,047 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_118-maxmutdiffselcorr.pdf
+2020-06-29 23:26:09,990 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_118-meanmutdiffsel.csv
+2020-06-29 23:26:10,125 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_118-meansitediffsel.csv
+2020-06-29 23:26:10,173 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_118-medianmutdiffsel.csv
+2020-06-29 23:26:10,309 - INFO - Writing median sitediffsel to ./results/diffsel/summary_118-mediansitediffsel.csv
+2020-06-29 23:26:10,350 - INFO - Analyzing the diffsel values for the 5 samples in group IDC561.
+2020-06-29 23:26:10,350 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDC561-mutdiffselcorr.pdf
+2020-06-29 23:26:16,232 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDC561-absolutesitediffselcorr.pdf
+2020-06-29 23:26:20,720 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDC561-positivesitediffselcorr.pdf
+2020-06-29 23:26:24,974 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDC561-maxmutdiffselcorr.pdf
+2020-06-29 23:26:29,255 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDC561-meanmutdiffsel.csv
+2020-06-29 23:26:29,419 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDC561-meansitediffsel.csv
+2020-06-29 23:26:29,462 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDC561-medianmutdiffsel.csv
+2020-06-29 23:26:29,611 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDC561-mediansitediffsel.csv
+2020-06-29 23:26:29,657 - INFO - Analyzing the diffsel values for the 4 samples in group 212.
+2020-06-29 23:26:29,657 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_212-mutdiffselcorr.pdf
+2020-06-29 23:26:33,472 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_212-absolutesitediffselcorr.pdf
+2020-06-29 23:26:36,592 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_212-positivesitediffselcorr.pdf
+2020-06-29 23:26:39,850 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_212-maxmutdiffselcorr.pdf
+2020-06-29 23:26:42,922 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_212-meanmutdiffsel.csv
+2020-06-29 23:26:43,067 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_212-meansitediffsel.csv
+2020-06-29 23:26:43,117 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_212-medianmutdiffsel.csv
+2020-06-29 23:26:43,256 - INFO - Writing median sitediffsel to ./results/diffsel/summary_212-mediansitediffsel.csv
+2020-06-29 23:26:43,307 - INFO - Analyzing the diffsel values for the 5 samples in group QA013-2282dpi.
+2020-06-29 23:26:43,307 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_QA013-2282dpi-mutdiffselcorr.pdf
+2020-06-29 23:26:49,002 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_QA013-2282dpi-absolutesitediffselcorr.pdf
+2020-06-29 23:26:53,469 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_QA013-2282dpi-positivesitediffselcorr.pdf
+2020-06-29 23:26:57,926 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_QA013-2282dpi-maxmutdiffselcorr.pdf
+2020-06-29 23:27:02,633 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_QA013-2282dpi-meanmutdiffsel.csv
+2020-06-29 23:27:02,821 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_QA013-2282dpi-meansitediffsel.csv
+2020-06-29 23:27:02,872 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_QA013-2282dpi-medianmutdiffsel.csv
+2020-06-29 23:27:03,042 - INFO - Writing median sitediffsel to ./results/diffsel/summary_QA013-2282dpi-mediansitediffsel.csv
+2020-06-29 23:27:03,093 - INFO - Analyzing the diffsel values for the 3 samples in group IDC0136.
+2020-06-29 23:27:03,093 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDC0136-mutdiffselcorr.pdf
+2020-06-29 23:27:06,097 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDC0136-absolutesitediffselcorr.pdf
+2020-06-29 23:27:08,040 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDC0136-positivesitediffselcorr.pdf
+2020-06-29 23:27:10,015 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDC0136-maxmutdiffselcorr.pdf
+2020-06-29 23:27:12,175 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDC0136-meanmutdiffsel.csv
+2020-06-29 23:27:12,298 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDC0136-meansitediffsel.csv
+2020-06-29 23:27:12,350 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDC0136-medianmutdiffsel.csv
+2020-06-29 23:27:12,479 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDC0136-mediansitediffsel.csv
+2020-06-29 23:27:12,528 - INFO - Analyzing the diffsel values for the 3 samples in group IDC0337.
+2020-06-29 23:27:12,529 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDC0337-mutdiffselcorr.pdf
+2020-06-29 23:27:15,584 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDC0337-absolutesitediffselcorr.pdf
+2020-06-29 23:27:17,720 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDC0337-positivesitediffselcorr.pdf
+2020-06-29 23:27:19,803 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDC0337-maxmutdiffselcorr.pdf
+2020-06-29 23:27:21,841 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDC0337-meanmutdiffsel.csv
+2020-06-29 23:27:21,963 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDC0337-meansitediffsel.csv
+2020-06-29 23:27:22,050 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDC0337-medianmutdiffsel.csv
+2020-06-29 23:27:22,172 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDC0337-mediansitediffsel.csv
+2020-06-29 23:27:22,222 - INFO - Analyzing the diffsel values for the 3 samples in group IDC403.
+2020-06-29 23:27:22,222 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDC403-mutdiffselcorr.pdf
+2020-06-29 23:27:25,162 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDC403-absolutesitediffselcorr.pdf
+2020-06-29 23:27:27,207 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDC403-positivesitediffselcorr.pdf
+2020-06-29 23:27:29,053 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDC403-maxmutdiffselcorr.pdf
+2020-06-29 23:27:31,044 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDC403-meanmutdiffsel.csv
+2020-06-29 23:27:31,173 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDC403-meansitediffsel.csv
+2020-06-29 23:27:31,226 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDC403-medianmutdiffsel.csv
+2020-06-29 23:27:31,333 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDC403-mediansitediffsel.csv
+2020-06-29 23:27:31,379 - INFO - Analyzing the diffsel values for the 3 samples in group IDC208.
+2020-06-29 23:27:31,379 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDC208-mutdiffselcorr.pdf
+2020-06-29 23:27:34,139 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDC208-absolutesitediffselcorr.pdf
+2020-06-29 23:27:36,219 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDC208-positivesitediffselcorr.pdf
+2020-06-29 23:27:38,343 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDC208-maxmutdiffselcorr.pdf
+2020-06-29 23:27:40,205 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDC208-meanmutdiffsel.csv
+2020-06-29 23:27:40,334 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDC208-meansitediffsel.csv
+2020-06-29 23:27:40,396 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDC208-medianmutdiffsel.csv
+2020-06-29 23:27:40,518 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDC208-mediansitediffsel.csv
+2020-06-29 23:27:40,621 - INFO - Analyzing the diffsel values for the 3 samples in group QA013-2.
+2020-06-29 23:27:40,621 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_QA013-2-mutdiffselcorr.pdf
+2020-06-29 23:27:43,351 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_QA013-2-absolutesitediffselcorr.pdf
+2020-06-29 23:27:45,389 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_QA013-2-positivesitediffselcorr.pdf
+2020-06-29 23:27:47,196 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_QA013-2-maxmutdiffselcorr.pdf
+2020-06-29 23:27:49,406 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_QA013-2-meanmutdiffsel.csv
+2020-06-29 23:27:49,530 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_QA013-2-meansitediffsel.csv
+2020-06-29 23:27:49,583 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_QA013-2-medianmutdiffsel.csv
+2020-06-29 23:27:49,691 - INFO - Writing median sitediffsel to ./results/diffsel/summary_QA013-2-mediansitediffsel.csv
+2020-06-29 23:27:49,742 - INFO - Analyzing the diffsel values for the 1 samples in group IDC0191.
+2020-06-29 23:27:49,742 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDC0191-mutdiffselcorr.pdf
+2020-06-29 23:27:50,397 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDC0191-absolutesitediffselcorr.pdf
+2020-06-29 23:27:50,845 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDC0191-positivesitediffselcorr.pdf
+2020-06-29 23:27:51,274 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDC0191-maxmutdiffselcorr.pdf
+2020-06-29 23:27:51,738 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDC0191-meanmutdiffsel.csv
+2020-06-29 23:27:51,815 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDC0191-meansitediffsel.csv
+2020-06-29 23:27:51,856 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDC0191-medianmutdiffsel.csv
+2020-06-29 23:27:51,922 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDC0191-mediansitediffsel.csv
+2020-06-29 23:27:51,979 - INFO - Analyzing the diffsel values for the 1 samples in group IDC0245.
+2020-06-29 23:27:51,979 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDC0245-mutdiffselcorr.pdf
+2020-06-29 23:27:52,683 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDC0245-absolutesitediffselcorr.pdf
+2020-06-29 23:27:53,188 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDC0245-positivesitediffselcorr.pdf
+2020-06-29 23:27:53,681 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDC0245-maxmutdiffselcorr.pdf
+2020-06-29 23:27:54,167 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDC0245-meanmutdiffsel.csv
+2020-06-29 23:27:54,245 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDC0245-meansitediffsel.csv
+2020-06-29 23:27:54,290 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDC0245-medianmutdiffsel.csv
+2020-06-29 23:27:54,365 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDC0245-mediansitediffsel.csv
+2020-06-29 23:27:54,414 - INFO - Analyzing the diffsel values for the 1 samples in group IDC0396.
+2020-06-29 23:27:54,414 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDC0396-mutdiffselcorr.pdf
+2020-06-29 23:27:54,954 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDC0396-absolutesitediffselcorr.pdf
+2020-06-29 23:27:55,380 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDC0396-positivesitediffselcorr.pdf
+2020-06-29 23:27:55,804 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDC0396-maxmutdiffselcorr.pdf
+2020-06-29 23:27:56,238 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDC0396-meanmutdiffsel.csv
+2020-06-29 23:27:56,309 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDC0396-meansitediffsel.csv
+2020-06-29 23:27:56,372 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDC0396-medianmutdiffsel.csv
+2020-06-29 23:27:56,436 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDC0396-mediansitediffsel.csv
+2020-06-29 23:27:56,493 - INFO - Analyzing the diffsel values for the 1 samples in group IDC0513.
+2020-06-29 23:27:56,493 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDC0513-mutdiffselcorr.pdf
+2020-06-29 23:27:57,033 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDC0513-absolutesitediffselcorr.pdf
+2020-06-29 23:27:57,602 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDC0513-positivesitediffselcorr.pdf
+2020-06-29 23:27:58,035 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDC0513-maxmutdiffselcorr.pdf
+2020-06-29 23:27:58,460 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDC0513-meanmutdiffsel.csv
+2020-06-29 23:27:58,538 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDC0513-meansitediffsel.csv
+2020-06-29 23:27:58,585 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDC0513-medianmutdiffsel.csv
+2020-06-29 23:27:58,652 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDC0513-mediansitediffsel.csv
+2020-06-29 23:27:58,695 - INFO - Analyzing the diffsel values for the 1 samples in group IDC0518.
+2020-06-29 23:27:58,695 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDC0518-mutdiffselcorr.pdf
+2020-06-29 23:27:59,246 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDC0518-absolutesitediffselcorr.pdf
+2020-06-29 23:27:59,838 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDC0518-positivesitediffselcorr.pdf
+2020-06-29 23:28:00,301 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDC0518-maxmutdiffselcorr.pdf
+2020-06-29 23:28:00,740 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDC0518-meanmutdiffsel.csv
+2020-06-29 23:28:00,820 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDC0518-meansitediffsel.csv
+2020-06-29 23:28:00,868 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDC0518-medianmutdiffsel.csv
+2020-06-29 23:28:00,948 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDC0518-mediansitediffsel.csv
+2020-06-29 23:28:01,001 - INFO - Analyzing the diffsel values for the 1 samples in group IDC0546.
+2020-06-29 23:28:01,001 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDC0546-mutdiffselcorr.pdf
+2020-06-29 23:28:01,599 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDC0546-absolutesitediffselcorr.pdf
+2020-06-29 23:28:02,068 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDC0546-positivesitediffselcorr.pdf
+2020-06-29 23:28:02,550 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDC0546-maxmutdiffselcorr.pdf
+2020-06-29 23:28:03,059 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDC0546-meanmutdiffsel.csv
+2020-06-29 23:28:03,151 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDC0546-meansitediffsel.csv
+2020-06-29 23:28:03,206 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDC0546-medianmutdiffsel.csv
+2020-06-29 23:28:03,283 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDC0546-mediansitediffsel.csv
+2020-06-29 23:28:03,332 - INFO - Analyzing the diffsel values for the 2 samples in group IDF033.
+2020-06-29 23:28:03,332 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDF033-mutdiffselcorr.pdf
+2020-06-29 23:28:04,731 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDF033-absolutesitediffselcorr.pdf
+2020-06-29 23:28:06,035 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDF033-positivesitediffselcorr.pdf
+2020-06-29 23:28:07,105 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDF033-maxmutdiffselcorr.pdf
+2020-06-29 23:28:08,115 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDF033-meanmutdiffsel.csv
+2020-06-29 23:28:08,207 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDF033-meansitediffsel.csv
+2020-06-29 23:28:08,252 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDF033-medianmutdiffsel.csv
+2020-06-29 23:28:08,340 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDF033-mediansitediffsel.csv
+2020-06-29 23:28:08,384 - INFO - Analyzing the diffsel values for the 1 samples in group IDF065.
+2020-06-29 23:28:08,384 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDF065-mutdiffselcorr.pdf
+2020-06-29 23:28:08,961 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDF065-absolutesitediffselcorr.pdf
+2020-06-29 23:28:09,445 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDF065-positivesitediffselcorr.pdf
+2020-06-29 23:28:09,865 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDF065-maxmutdiffselcorr.pdf
+2020-06-29 23:28:10,311 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDF065-meanmutdiffsel.csv
+2020-06-29 23:28:10,382 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDF065-meansitediffsel.csv
+2020-06-29 23:28:10,424 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDF065-medianmutdiffsel.csv
+2020-06-29 23:28:10,492 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDF065-mediansitediffsel.csv
+2020-06-29 23:28:10,535 - INFO - Analyzing the diffsel values for the 1 samples in group IDF141.
+2020-06-29 23:28:10,535 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDF141-mutdiffselcorr.pdf
+2020-06-29 23:28:11,089 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDF141-absolutesitediffselcorr.pdf
+2020-06-29 23:28:11,596 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDF141-positivesitediffselcorr.pdf
+2020-06-29 23:28:12,210 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDF141-maxmutdiffselcorr.pdf
+2020-06-29 23:28:12,685 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDF141-meanmutdiffsel.csv
+2020-06-29 23:28:12,780 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDF141-meansitediffsel.csv
+2020-06-29 23:28:12,828 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDF141-medianmutdiffsel.csv
+2020-06-29 23:28:12,907 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDF141-mediansitediffsel.csv
+2020-06-29 23:28:12,956 - INFO - Analyzing the diffsel values for the 1 samples in group IDF147.
+2020-06-29 23:28:12,956 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_IDF147-mutdiffselcorr.pdf
+2020-06-29 23:28:13,649 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_IDF147-absolutesitediffselcorr.pdf
+2020-06-29 23:28:14,176 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_IDF147-positivesitediffselcorr.pdf
+2020-06-29 23:28:14,633 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_IDF147-maxmutdiffselcorr.pdf
+2020-06-29 23:28:15,090 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_IDF147-meanmutdiffsel.csv
+2020-06-29 23:28:15,174 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_IDF147-meansitediffsel.csv
+2020-06-29 23:28:15,232 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_IDF147-medianmutdiffsel.csv
+2020-06-29 23:28:15,314 - INFO - Writing median sitediffsel to ./results/diffsel/summary_IDF147-mediansitediffsel.csv
+2020-06-29 23:28:15,362 - INFO - Plotting mean positive diffsel to ./results/diffsel/summary_meanpositivediffsel.pdf
+2020-06-29 23:28:54,199 - INFO - Plotting mean total diffsel to ./results/diffsel/summary_meantotaldiffsel.pdf
+2020-06-29 23:29:34,481 - INFO - Plotting mean max diffsel to ./results/diffsel/summary_meanmaxdiffsel.pdf
+2020-06-29 23:30:12,618 - INFO - Plotting mean minmax diffsel to ./results/diffsel/summary_meanminmaxdiffsel.pdf
+2020-06-29 23:30:52,614 - INFO - Plotting median positive diffsel to ./results/diffsel/summary_medianpositivediffsel.pdf
+2020-06-29 23:31:30,985 - INFO - Plotting median total diffsel to ./results/diffsel/summary_mediantotaldiffsel.pdf
+2020-06-29 23:32:12,222 - INFO - Plotting median max diffsel to ./results/diffsel/summary_medianmaxdiffsel.pdf
+2020-06-29 23:32:49,907 - INFO - Plotting median minmax diffsel to ./results/diffsel/summary_medianminmaxdiffsel.pdf
+2020-06-29 23:33:31,724 - INFO - Successful completion of dms2_batch_diffsel
