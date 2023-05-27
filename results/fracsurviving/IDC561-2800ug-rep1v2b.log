@@ -1,0 +1,75 @@
+2023-05-26 19:10:12,496 - INFO - Beginning execution of dms2_fracsurvive in directory /fh/fast/bloom_j/computational_notebooks/ceradfor/2023/HIV_Broad_Human_Sera_MAP
+
+2023-05-26 19:10:12,496 - INFO - Progress is being logged to ./results/fracsurviving/IDC561-2800ug-rep1v2b.log
+2023-05-26 19:10:12,499 - INFO - Version information:
+	Time and date: Fri May 26 19:10:12 2023
+	Platform: Linux-4.15.0-192-generic-x86_64-with-debian-buster-sid
+	Python version: 3.7.8 | packaged by conda-forge | (default, Jul 31 2020, 02:25:08)  [GCC 7.5.0]
+	dms_tools2 version: 2.6.7
+	Bio version: 1.78
+	pandas version: 0.25.3
+	numpy version: 1.17.0
+	IPython version: 7.19.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.3.2
+	plotnine version: 0.7.1
+	natsort version: 7.0.1
+	pystan version: 2.19.1.1
+	scipy version: 1.5.4
+	seaborn version: 0.11.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.12.1
+	rpy2 cannot be imported
+	regex version: 2.5.89
+	umi_tools version: 1.1.0
+
+2023-05-26 19:10:12,499 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurviving
+	ncpus = 1
+	use_existing = yes
+	indir = adingens_analysis/results/renumberedcounts
+	chartype = codon_to_aa
+	aboveavg = no
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = IDC561-2800ug-rep1v2b
+	sel = mtvir-rep1v2b-561-IgG-2800ug
+	mock = mtvir-rep1v2b
+	libfracsurvive = 0.007366521
+	err = wt-DNA-rep1
+
+2023-05-26 19:10:12,500 - INFO - Reading selected sample counts from mtvir-rep1v2b-561-IgG-2800ug
+2023-05-26 19:10:12,524 - INFO - Reading mock-selected sample counts from mtvir-rep1v2b
+2023-05-26 19:10:12,533 - INFO - Reading error-control sample counts from wt-DNA-rep1
+2023-05-26 19:10:12,539 - INFO - Computing fracsurvive for each mutation...
+2023-05-26 19:10:17,934 - INFO - Mutations with largest mutfracsurvive:
+ site wildtype mutation  mutfracsurvive
+   90        T        H            0.09
+  207        K        M            0.07
+  331        C        L            0.07
+  219        A        N            0.06
+  521        G        W            0.06
+  387        T        F            0.06
+  549        V        L            0.06
+  175        L        E            0.06
+ 184d        Q        T            0.06
+ 184e        G        T            0.06
+
+2023-05-26 19:10:17,934 - INFO - Writing to ./results/fracsurviving/IDC561-2800ug-rep1v2b_mutfracsurvive.csv
+2023-05-26 19:10:17,967 - INFO - Computing sitefracsurvive...
+2023-05-26 19:10:17,979 - INFO - Sites with largest avgfracsurvive:
+ site  avgfracsurvive  maxfracsurvive
+  304            0.02            0.05
+  207            0.02            0.07
+   90            0.02            0.09
+ 184g            0.01            0.04
+  119            0.01            0.04
+  209            0.01            0.04
+   52            0.01            0.04
+  395            0.01            0.04
+  158            0.01            0.05
+  136            0.01            0.04
+
+2023-05-26 19:10:17,980 - INFO - Writing to ./results/fracsurviving/IDC561-2800ug-rep1v2b_sitefracsurvive.csv
+2023-05-26 19:10:17,985 - INFO - Successful completion of dms2_fracsurvive

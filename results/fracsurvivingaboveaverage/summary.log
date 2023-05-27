@@ -1,0 +1,72 @@
+2023-05-26 21:05:59,204 - INFO - Beginning execution of dms2_batch_fracsurvive in directory /fh/fast/bloom_j/computational_notebooks/ceradfor/2023/HIV_Broad_Human_Sera_MAP
+
+2023-05-26 21:05:59,204 - INFO - Progress is being logged to ./results/fracsurvivingaboveaverage/summary.log
+2023-05-26 21:05:59,207 - INFO - Version information:
+	Time and date: Fri May 26 21:05:59 2023
+	Platform: Linux-4.15.0-192-generic-x86_64-with-debian-buster-sid
+	Python version: 3.7.8 | packaged by conda-forge | (default, Jul 31 2020, 02:25:08)  [GCC 7.5.0]
+	dms_tools2 version: 2.6.7
+	Bio version: 1.78
+	pandas version: 0.25.3
+	numpy version: 1.17.0
+	IPython version: 7.19.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.3.2
+	plotnine version: 0.7.1
+	natsort version: 7.0.1
+	pystan version: 2.19.1.1
+	scipy version: 1.5.4
+	seaborn version: 0.11.0
+	phydmslib version: 2.3.8
+	statsmodels version: 0.12.1
+	rpy2 cannot be imported
+	regex version: 2.5.89
+	umi_tools version: 1.1.0
+
+2023-05-26 21:05:59,207 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurvivingaboveaverage
+	ncpus = -1
+	use_existing = yes
+	indir = adingens_analysis/results/renumberedcounts
+	chartype = codon_to_aa
+	aboveavg = yes
+	excludestop = yes
+	pseudocount = 5
+	mincount = 0
+	batchfile = ./results/fracsurviving/batch.csv
+	summaryprefix = summary
+
+2023-05-26 21:05:59,207 - INFO - Parsing info from ./results/fracsurviving/batch.csv
+2023-05-26 21:05:59,217 - INFO - Read the following sample information:
+group,name,sel,mock,err,mds_names,libfracsurvive
+IDC0136,8500ug-rep1v2b,mtvir-rep1v2b-IDC0136-8500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0136-8500ug-rep1v2b,0.04126587
+IDC0136,7000ug-rep1v2b,mtvir-rep1v2b-IDC0136-7000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0136-7000ug-rep1v2b,0.06297330400000001
+IDC0136,5500ug-rep1v2b,mtvir-rep1v2b-IDC0136-5500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0136-5500ug-rep1v2b,0.136000955
+IDC0191,6000ug-rep3v2a,mtvir-rep3v2a-IDC0191-6000ug,mtvir-rep3v2a,wt-DNA-rep3,IDC0191-6000ug-rep3v2a,0.000491656
+IDC0245,8000ug-rep3v2a,mtvir-rep3v2a-IDC0245-8000ug,mtvir-rep3v2a,wt-DNA-rep3,IDC0245-8000ug-rep3v2a,0.001750749
+IDC0337,4000ug-rep1v2b,mtvir-rep1v2b-IDC0337-4000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0337-4000ug-rep1v2b,0.10200934
+IDC0337,4500ug-rep1v2b,mtvir-rep1v2b-IDC0337-4500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0337-4500ug-rep1v2b,0.091161243
+IDC0337,6000ug-rep1v2b,mtvir-rep1v2b-IDC0337-6000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC0337-6000ug-rep1v2b,0.059009668
+IDC0396,9000ug-rep3v2a,mtvir-rep3v2a-IDC0396-9000ug,mtvir-rep3v2a,wt-DNA-rep3,IDC0396-9000ug-rep3v2a,0.003733771
+IDC0513,5000ug-rep3v2a,mtvir-rep3v2a-IDC0513-5000ug,mtvir-rep3v2a,wt-DNA-rep3,IDC0513-5000ug-rep3v2a,0.00097499
+IDC0518,8000ug-rep3v2a,mtvir-rep3v2a-IDC0518-8000ug,mtvir-rep3v2a,wt-DNA-rep3,IDC0518-8000ug-rep3v2a,0.060662594000000014
+IDC0546,8500ug-rep3v2a,mtvir-rep3v2a-IDC0546-8500ug,mtvir-rep3v2a,wt-DNA-rep3,IDC0546-8500ug-rep3v2a,0.011035201
+IDC208,4000ug-rep1v2b,mtvir-rep1v2b-IDC208-4000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC208-4000ug-rep1v2b,0.150961614
+IDC208,5000ug-rep1v2b,mtvir-rep1v2b-IDC208-5000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC208-5000ug-rep1v2b,0.103580829
+IDC208,6000ug-rep1v2b,mtvir-rep1v2b-IDC208-6000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC208-6000ug-rep1v2b,0.068418903
+IDC403,6000ug-rep1v2b,mtvir-rep1v2b-IDC403-6000ug,mtvir-rep1v2b,wt-DNA-rep1,IDC403-6000ug-rep1v2b,0.001969129
+IDC403,7500ug-rep1v2b,mtvir-rep1v2b-IDC403-7500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC403-7500ug-rep1v2b,0.0008930569999999998
+IDC403,8500ug-rep1v2b,mtvir-rep1v2b-IDC403-8500ug,mtvir-rep1v2b,wt-DNA-rep1,IDC403-8500ug-rep1v2b,0.000359057
+IDC561,2800ug-rep1v2b,mtvir-rep1v2b-561-IgG-2800ug,mtvir-rep1v2b,wt-DNA-rep1,IDC561-2800ug-rep1v2b,0.007366521
+IDC561,2200ug-rep1v2b,mtvir-rep1v2b-561-IgG-2200ug,mtvir-rep1v2b,wt-DNA-rep1,IDC561-2200ug-rep1v2b,0.012112296000000002
+IDC561,2500ug-rep3e,mtvir-rep3e-561-IgG-2500ug,mtvir-rep3e,wt-DNA-rep3,IDC561-2500ug-rep3e,0.023229919
+IDC561,3500ug-rep1v2a,mtvir-rep1v2a-561-IgG-3500ug,mtvir-rep1v2a,wt-DNA-rep1,IDC561-3500ug-rep1v2a,0.00181995
+IDC561,3000ug-rep1v2a,mtvir-rep1v2a-561-IgG-3000ug,mtvir-rep1v2a,wt-DNA-rep1,IDC561-3000ug-rep1v2a,0.002478397
+IDF033,1800ug-rep3v2a,mtvir-rep3v2a-IDF033-1800ug,mtvir-rep3v2a,wt-DNA-rep3,IDF033-1800ug-rep3v2a,0.0007303419999999999
+IDF033,1400ug-rep3v2a,mtvir-rep3v2a-IDF033-1400ug,mtvir-rep3v2a,wt-DNA-rep3,IDF033-1400ug-rep3v2a,0.001389969
+IDF065,1400ug-rep3v2a,mtvir-rep3v2a-IDF065-1400ug,mtvir-rep3v2a,wt-DNA-rep3,IDF065-1400ug-rep3v2a,0.007029193
+IDF141,6000ug-rep3v2a,mtvir-rep3v2a-IDF141-6000ug,mtvir-rep3v2a,wt-DNA-rep3,IDF141-6000ug-rep3v2a,0.000234801
+IDF147,5300ug-rep3v2a,mtvir-rep3v2a-IDF147-5300ug,mtvir-rep3v2a,wt-DNA-rep3,IDF147-5300ug-rep3v2a,0.0044904440000000006
+
+
+2023-05-26 21:05:59,247 - INFO - Output summary files already exist and '--use_existing' is 'yes', so exiting with no further action.
