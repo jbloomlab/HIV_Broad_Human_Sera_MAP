@@ -6,7 +6,7 @@ This repository converts an analysis of MAP data using broad human anti-HIV sera
 
 The `adingens_analysis` folder contains the analysis written by Adam Dingens. Caelan did not modify its contents. This folder contains its own documentation, which should be viewed for details on that analysis. 
 
-The `generate_interactive_plots.ipynb` calculates the fraction surviving statistic for each serum selection, which were not calculated previously. The `results` folder contians the results from these calculations. 
+The `calculate_fraction_surviving_all_sera.ipynb` calculates the fraction surviving statistic for each serum selection, which were not calculated previously. The `results` folder contains the results from these calculations. 
 
 The `generate_interactive_plots.ipynb` converts the results from Adam Dingens' analysis into interactive plots from the [*polyclonal*](https://jbloomlab.github.io/polyclonal/) software. Because these plots are produced outside of a pipeline like the [dms-vep-pipeline](https://github.com/dms-vep/dms-vep-pipeline), they will not contain as much information as plots produced by that pipeline, such as [this](https://dms-vep.github.io/HIV_Envelope_BF520_DMS_CD4bs_sera/IDC508_escape_plot.html) one. 
 
